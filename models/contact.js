@@ -17,8 +17,7 @@ const client = new Schema({
   phone: {
     type: Number,
     unique: true,
-    required: true,
-    maxLength: [12,"exceeded"],
+    required: true
    
   },
 });
