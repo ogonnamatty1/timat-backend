@@ -19,7 +19,6 @@
     "validator": "^13.9.0"
   },
   "devDependencies": {
-    "grunt": "^1.6.1",
     "nodemon": "^3.0.1"
   }
 }
