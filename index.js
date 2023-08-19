@@ -6,6 +6,8 @@ console.log('working')
  const dotenvConfig= dotenv.config();
  const mongoose = require("mongoose");
 const cors = require("cors");
+// port 
+const port =process.env.PORT||3000
 //   IMPORTING MODELS PATH 
 const users = require('./models/contact');
 // const router = require('./routes/usersRoute')
@@ -47,6 +49,6 @@ app.use((req, res) => {
 
 // creatin our port 
 
-app.listen(process.env.PORT, '0.0.0.0',()=>{
+app.listen(port,()=>{
     console.log('server is running')
 })
