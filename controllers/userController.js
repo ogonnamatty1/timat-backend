@@ -33,7 +33,7 @@ const creatUsers = async (req, res) => {
 };
 
 const getUsers = async (req, res) => {
-  const getClients = await users.find();
+  const getClients = await clients.find();
   try {
     res.status(201).json({ data: getClients });
   } catch (err) {
