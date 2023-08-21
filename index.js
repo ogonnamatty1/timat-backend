@@ -4,10 +4,25 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
+<<<<<<< HEAD
+=======
+
+>>>>>>> fed2e06a45fc4df7f6b68a99d2793f12569c17ec
 // port 
-const port =process.env.PORT||3000
+// const port = process.env.PORT||3000
 //   IMPORTING MODELS PATH 
+<<<<<<< HEAD
 const clients = require('./models/contact');
+=======
+// const clients = require('./models/contact');
+
+const dotenv = require("dotenv");
+dotenv.config();
+// port
+// const port = process.env.PORT||3000
+//   IMPORTING MODELS PATH
+// const users = require('./models/contact');
+>>>>>>> fed2e06a45fc4df7f6b68a99d2793f12569c17ec
 // const router = require('./routes/usersRoute')
 
 // connecting database
