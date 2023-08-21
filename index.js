@@ -9,7 +9,7 @@ const cors = require("cors");
 // port 
 const port =process.env.PORT||3000
 //   IMPORTING MODELS PATH 
-const users = require('./models/contact');
+const clients = require('./models/contact');
 // const router = require('./routes/usersRoute')
 
 
