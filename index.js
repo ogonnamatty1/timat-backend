@@ -22,7 +22,7 @@ dotenv.config();
 // const users = require('./models/contact');
 // const router = require('./routes/usersRoute')
 // connecting database
-app.use(cors());
+app.use(cors({ origin: `${process.env.FRONTENDBASEURL}`, methods: ["GET", "POST"] }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
