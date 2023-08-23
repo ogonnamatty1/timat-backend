@@ -10,6 +10,7 @@ const cors = require("cors");
 //   IMPORTING MODELS PATH 
 
 const clients = require('./models/contact');
+const contactRoutes = require("./routes/usersRoute");
 
 // const clients = require('./models/contact');
 
@@ -20,16 +21,16 @@ dotenv.config();
 //   IMPORTING MODELS PATH
 // const users = require('./models/contact');
 // const router = require('./routes/usersRoute')
-
 // connecting database
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+try {
 mongoose
-  .connect(process.env.DATABASE, {
+  .connect(`mongodb+srv://ogonnamatthew:${process.env.PASSWORD}@cluster0.5itj9zn.mongodb.net/${process.env.DATABASENAME}?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
+    useUnifiedTopology: true, 
   })
   .then(() => {
     console.log("database connected");
@@ -38,7 +39,7 @@ mongoose
     console.log(err);
   });
 
-const contactRoutes = require("./routes/usersRoute");
+
 
 app.use("/api/timatech/apply", contactRoutes);
 
@@ -56,3 +57,7 @@ app.use((req, res) => {
 app.listen(process.env.PORT || 3000, () => {
   console.log(`server is running ${process.env.PORT}`);
 });
+
+} catch (error) {
+  throw new Error(error)
+}
