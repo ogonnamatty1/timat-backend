@@ -30,7 +30,7 @@ try {
 mongoose
   .connect(`mongodb+srv://ogonnamatthew:${process.env.PASSWORD}@cluster0.5itj9zn.mongodb.net/${process.env.DATABASENAME}?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
-    useUnifiedTopology: true, 
+    useUnifiedTopology: true,
   })
   .then(() => {
     console.log("database connected");
@@ -38,8 +38,6 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-
-
 
 app.use("/api/timatech/apply", contactRoutes);
 
